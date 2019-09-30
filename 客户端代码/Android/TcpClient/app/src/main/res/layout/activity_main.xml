@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:background="#278dff"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="匿名聊天室"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/right_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="3dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/circular_point_blue_shape" />
+
+            <TextView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/circular_point_blue_shape" />
+
+            <TextView
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/circular_point_blue_shape" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:background="#e5e5e5">
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e5e5e5"
+            android:elevation="3dp">
+
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/send_btn_selector"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="#333333" />
+
+            <EditText
+                android:id="@+id/etv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/send_btn"
+                android:background="@drawable/send_bg"
+                android:maxLines="1"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/msg_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_alignParentTop="true"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</FrameLayout>

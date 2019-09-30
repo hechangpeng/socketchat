@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingTop="6dp"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/enter_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:textSize="11sp" />
+</LinearLayout>
